@@ -44,7 +44,9 @@ dist := analyzeDistribution(ch, keys, servers)
 # Time Complexity
 
 1)Find Node(Lookup) :- O(log N) - binary search
+
 2)Add Node:- O(K × N) - K virtual nodes, insert into sorted slice
+
 3)Remove Node:- O(K × N) - K virtual nodes, delete from slice
 
 Insert and delete is O(N) which is acceptable as ring changes are rare.
