@@ -29,7 +29,17 @@ Consistent hashing fixes this: when you add/remove a server, only ~1/N keys move
 5) Finding which server handles a key:-
      server := ch.FindNodeFor("User123")
 6) Removing a server:-
-     ch.RemoveNode("S1")     
+     ch.RemoveNode("S1")
+   
+# Key Features
+
+Virtual Nodes: Each physical server gets multiple positions on the ring (default 10). This makes data distribution more even.
+
+Rebalancing Metrics: When you add or remove a server, the code tells you exactly how many keys moved.  
+metrics, _ := ch.AddNodeWithMetrics("S6", keys)
+
+
+   
 
 
 
