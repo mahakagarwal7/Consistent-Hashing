@@ -11,10 +11,12 @@ Consistent hashing fixes this: when you add/remove a server, only ~1/N keys move
 
 # What the Code Contains?
 1)  Two Types of Hash Rings
-a)ConsistentHasher :- Basic version-one node = one position on ring
-b)ConsistentHasherV :- With virtual nodes-one node = multiple positions
 
-2) Main Functions:-
+     a)ConsistentHasher :- Basic version-one node = one position on ring
+     
+     b)ConsistentHasherV :- With virtual nodes-one node = multiple positions
+
+3) Main Functions:-
      
      a)basic := NewConsistentHasher(ringSize) //without virtual nodes
      
