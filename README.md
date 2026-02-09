@@ -49,6 +49,19 @@ dist := analyzeDistribution(ch, keys, servers)
 
 Insert and delete is O(N) which is acceptable as ring changes are rare.
 
+# Design Decisions
+Q)Why slices instead of trees? 
+
+  Slices with binary search give O(log N) lookup as required. Insert/delete is O(N) but acceptable since ring changes are rare.
+
+Q)Why MD5? 
+
+  Fast, good distribution, produces 128-bit hash giving large ring space (0 to 2^32-1).
+
+Q)Why 10 default virtual nodes? 
+
+ Good balance between distribution quality and memory usage.
+
 
 
 

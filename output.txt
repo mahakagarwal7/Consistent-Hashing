@@ -1,0 +1,15 @@
+//OUTPUT:-
+
+Without virtual nodes:
+Mean=166666.7, StdDev=129820.32, MaxDev=104.8%
+With virtual nodes (10 per server):
+Mean=166666.7, StdDev=35008.48, MaxDev=44.7%
+Adding S6:
+Moved: 117832/1000000 (11.78%), Expected: ~14.29%
+Removing S2:
+Moved: 137647/1000000 (13.76%), Expected: ~16.67%
+Vnode comparison (1,10,100,500):
+VNodes=1 StdDev=140714.87
+VNodes=10 StdDev=35008.48
+VNodes=100 StdDev=13082.03
+VNodes=500 StdDev=5878.48
