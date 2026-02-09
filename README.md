@@ -16,14 +16,16 @@ b)ConsistentHasherV :- With virtual nodes-one node = multiple positions
 
 2) Main Functions
 a)basic := NewConsistentHasher(ringSize) //without virtual nodes
+
 b)vnode := NewConsistentHasherV(ringSize) // With 10 virtual nodes per server
+
 c)custom := NewConsistentHasherVWithVNodes(size, 100) // With 100 virtual nodes
 
-3) Adding a server:-
+4) Adding a server:-
      ch.AddNode("S1")
-4) Finding which server handles a key:-
+5) Finding which server handles a key:-
      server := ch.FindNodeFor("User123")
-5) Removing a server:-
+6) Removing a server:-
      ch.RemoveNode("S1")     
 
 
