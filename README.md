@@ -38,6 +38,19 @@ Virtual Nodes: Each physical server gets multiple positions on the ring (default
 Rebalancing Metrics: When you add or remove a server, the code tells you exactly how many keys moved.  
 metrics, _ := ch.AddNodeWithMetrics("S6", keys)
 
+Load Distribution Analysis: Shows how evenly keys are spread across servers using standard deviation.
+dist := analyzeDistribution(ch, keys, servers)
+
+# Time Complexity
+
+1)Find Node(Lookup) :- O(log N) - binary search
+2)Add Node:- O(K × N) - K virtual nodes, insert into sorted slice
+3)Remove Node:- O(K × N) - K virtual nodes, delete from slice
+
+Insert and delete is O(N) which is acceptable as ring changes are rare.
+
+
+
 
    
 
