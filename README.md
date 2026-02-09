@@ -14,12 +14,13 @@ Consistent hashing fixes this: when you add/remove a server, only ~1/N keys move
 a)ConsistentHasher :- Basic version-one node = one position on ring
 b)ConsistentHasherV :- With virtual nodes-one node = multiple positions
 
-2) Main Functions
-a)basic := NewConsistentHasher(ringSize) //without virtual nodes
-
-b)vnode := NewConsistentHasherV(ringSize) // With 10 virtual nodes per server
-
-c)custom := NewConsistentHasherVWithVNodes(size, 100) // With 100 virtual nodes
+2) Main Functions:-
+     
+     a)basic := NewConsistentHasher(ringSize) //without virtual nodes
+     
+     b)vnode := NewConsistentHasherV(ringSize) // With 10 virtual nodes per server
+     
+     c)custom := NewConsistentHasherVWithVNodes(size, 100) // With 100 virtual nodes
 
 4) Adding a server:-
      ch.AddNode("S1")
