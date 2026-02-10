@@ -14,7 +14,9 @@ changes, causing ~100% key movement.
 ## Effect of Virtual Nodes
 
 Without vnodes: StdDev = 129820 (uneven)
+
 With 10 vnodes: StdDev = 35008 (73% better)
+
 With 500 vnodes: StdDev = 5878 (95% better)
 
 More virtual nodes = more even distribution.
